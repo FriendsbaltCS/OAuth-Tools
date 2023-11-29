@@ -3,7 +3,7 @@ function generatePostRequest() {
     let tokenEndpoint = document.getElementById("token-endpoint").value;
     let clientSecret = document.getElementById("client-secret").value;
     let clientId = document.getElementById("client-id").value;
-    let authorizationCode = extractCodeFromURL();
+    let authorizationCode = document.getElementById("auth-code").value;
     let code = encodeURIComponent(document.getElementById("auth-code").value);
     let redirectUri = getCookie("redirect_uri");
 
