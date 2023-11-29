@@ -40,7 +40,7 @@ function getCookie(name) {
 function extractCodeFromURL() {
     let url = window.location.href;
     let code = url.split("code=")[1].split("&")[0];
-    document.getElementById("authorization-code").value = code;
+    document.getElementById("auth-code").value = code;
 }
 
 
