@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth Code Redirect</title>
+</head>
+<body>
+    <section>
+        <h1>Authorization Details</h1>
+        <label for="auth-code">Authorization Code</label>
+        <input type="text" id="auth-code" name="auth-code"><br>
+        
+        <label for="token-endpoint">Token Endpoint</label>
+        <input type="text" id="token-endpoint" name="token-endpoint"><br>
+        
+        <label for="client-id">Client ID</label>
+        <input type="text" id="client-id" name="client-id"><br>
+        
+        <label for="client-id">Client Secret</label>
+        <input type="text" id="client-secret" name="client-secret"><br>
+    </section>
+    <section>
+        <h1>POST Request</h1>
+        <textarea id="post-request" rows="4" cols="50"></textarea>
+        <button id="generate-post-request">Generate POST Request</button>
+        <button id="execute-post-request">Execute POST Request</button>
+    </section>
+    <script src="./script/post-request.js"></script>
+</body>
+</html>
