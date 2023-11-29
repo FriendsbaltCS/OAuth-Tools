@@ -8,13 +8,12 @@ function generatePostRequest() {
     let redirectUri = getCookie("redirect_uri");
 
     // Generate the cURL request
-    let curlCommand = `curl -X POST ${tokenEndpoint} \\
-        -H Content-Type: application/x-www-form-urlencoded \\
-        -d client_id=${clientId} \\
-        -d client_secret=${clientSecret} \\
-        -d code=${authorizationCode} \\
-        -d grant_type=authorization_code \\
-        -d redirect_uri=${redirectUri}`;
+    let curlCommand =  "curl -X POST " + tokenEndpoint + " \\"
+    + "\n -d grant_type=authorization_code \\"
+    + "\n -d redirect_uri=" + redirectUri + " \\"
+    + "\n -d client_id=" + clientId + " \\"
+    + "\n -d client_secret=" + clientSecret + " \\"
+    + "\n -d code=" + authorizationCode;
 
     document.getElementById("curl-command").value = curlCommand;
 }
