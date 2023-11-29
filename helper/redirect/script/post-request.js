@@ -6,11 +6,11 @@ function generatePostRequest() {
     let authorizationCode = extractCodeFromURL();
 
     // Generate the cURL request
-    let curlCommand = `curl -X POST ${tokenEndpoint} \
-        -H "Content-Type: application/x-www-form-urlencoded" \
-        -d "client_id=${clientId}" \
-        -d "client_secret=${clientSecret}" \
-        -d "code=${authorizationCode}" \
+    let curlCommand = `curl -X POST ${tokenEndpoint} \\
+        -H "Content-Type: application/x-www-form-urlencoded" \\
+        -d "client_id=${clientId}" \\
+        -d "client_secret=${clientSecret}" \\
+        -d "code=${authorizationCode}" \\
         -d "grant_type=authorization_code"`;
 
     document.getElementById("curl-command").value = curlCommand;
