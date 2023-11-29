@@ -45,3 +45,6 @@ function extractCodeFromURL() {
 
 
 populateFromCookies();
+extractCodeFromURL();
+
+document.getElementById("generate-post-request").addEventListener("click", generatePostRequest);
