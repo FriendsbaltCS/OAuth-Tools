@@ -20,6 +20,9 @@ function generateAuthURL() {
     document.cookie = `client_id=${client_id}`;
     document.cookie = `client_secret=${client_secret}`;
     document.cookie = `token_ep=${token_ep}`;
+    document.cookie = `state=${state}`;
+    document.cookie = `scope=${scope}`;
+    document.cookie = `redirect_uri=${redirect_uri}`;
 }
 
 function visitAuthURL() {

@@ -4,14 +4,17 @@ function generatePostRequest() {
     let clientSecret = document.getElementById("client-secret").value;
     let clientId = document.getElementById("client-id").value;
     let authorizationCode = extractCodeFromURL();
+    let code = encodeURIComponent(document.getElementById("auth-code").value);
+    let redirectUri = getCookie("redirect_uri");
 
     // Generate the cURL request
     let curlCommand = `curl -X POST ${tokenEndpoint} \\
-        -H "Content-Type: application/x-www-form-urlencoded" \\
-        -d "client_id=${clientId}" \\
-        -d "client_secret=${clientSecret}" \\
-        -d "code=${authorizationCode}" \\
-        -d "grant_type=authorization_code"`;
+        -H Content-Type: application/x-www-form-urlencoded \\
+        -d client_id=${clientId} \\
+        -d client_secret=${clientSecret} \\
+        -d code=${authorizationCode} \\
+        -d grant_type=authorization_code \\
+        -d redirect_uri=${redirectUri}`;
 
     document.getElementById("curl-command").value = curlCommand;
 }
