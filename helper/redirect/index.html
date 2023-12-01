@@ -17,12 +17,18 @@
         
         <label for="client-id">Client Secret</label>
         <input type="text" id="client-secret" name="client-secret"><br>
+
+        <label for="redirect-uri">Redirect URL</label>
+        <input type="text" id="redirect-uri" name="redirect-uri"><br>
+
     </section>
     <section>
         <h1>POST Request</h1>
         <textarea id="curl-command" rows="4" cols="50"></textarea><br>
         <button id="generate-post-request">Generate POST Request</button>
-        <button id="execute-post-request">Execute POST Request</button>
+        <button id="execute-post-request" disabled>Execute POST Request</button>
+        <button id="copy-curl-command" disabled>Copy cURL Command</button>
+        <button id="download-token-file" disabled>Download Token File</button>
     </section>
     <script src="./script/post-request.js"></script>
 </body>
