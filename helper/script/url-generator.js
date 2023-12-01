@@ -7,7 +7,7 @@ function generateAuthURL() {
     let scope = document.getElementById("scope").value;
     let state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     let response_type = "code";
-    let refreshTokens = document.getElementById("refresh-token").checked ? "&access_type=offline" : "";
+    let refreshTokens = document.getElementById("refresh-token").checked ? "&access_type=offline&prompt=consent" : "";
     url = `${auth_ep}?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}&state=${state}&response_type=${response_type}${refreshTokens}`;
     let displayUrl = url.replace(/&/g, "&\n");
 
