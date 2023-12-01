@@ -19,6 +19,9 @@
         <br>
         <label for="scope">Scopes</label>
         <input type="text" id="scope" name="scope" title="Use '+' between individual scopes">
+        <br>
+        <label for="refresh-token">Request Refresh Token</label>
+        <input type="checkbox" id="refresh-token" name="refresh-token">
     </section>
     <section>
         <h1>API Details</h1>
@@ -27,10 +30,11 @@
         <br>
         <label for="token-endpoint">Token Endpoint</label>
         <input type="text" id="token-endpoint" name="token-endpoint">
+
     </section>
     <section>
         <h1>Generate Authorization URL</h1>
-        <textarea id="auth-url" rows="4" cols="50" readonly></textarea>
+        <textarea id="auth-url" rows="4" cols="50"></textarea>
         <br>
         <button id="generate-auth-url">Generate Auth URL</button>
         <button id="visit-auth-url" disabled>Visit Auth URL</button>
