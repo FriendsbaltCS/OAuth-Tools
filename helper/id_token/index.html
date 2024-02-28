@@ -10,6 +10,9 @@
 <body>
     <h1>ID Token Fetcher</h1>
     <p>Click the button below to sign in with Google and get an ID token.</p>
+    <p> Note that the issued token will have a client ID corresponding to <em>this</em>
+        application (not your application).
+    </p>
     
     <div id="g_id_onload"
         data-client_id="92423888910-c8m8vbh287jqr94unr98tost44sebvv4.apps.googleusercontent.com"
@@ -30,8 +33,9 @@
     </div>
 
     <div id="token">
-        <p>Token:</p>
-        <textarea id="token-text" rows="10" cols="50"></textarea>
+        <label for="token-text">Token: </label><br/>
+        <textarea id="token-text" rows="10" cols="50"></textarea><br/>
+        <button id="copy-button">Copy to Clipboard</button>
     </div>
 </body>
 </html>
