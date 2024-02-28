@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ID Token Fetcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <h1>ID Token Fetcher</h1>
+    <p>Click the button below to sign in with Google and get an ID token.</p>
+    
+    <div id="g_id_onload"
+        data-client_id="92423888910-c8m8vbh287jqr94unr98tost44sebvv4.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-callback="handle_response"
+        data-nonce=""
+        data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="outline"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+    </div>
+
+    <div id="token">
+        <p>Token:</p>
+        <textarea id="token-text" rows="10" cols="50"></textarea>
+    </div>
+</body>
+</html>
